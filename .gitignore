@@ -9,3 +9,10 @@ __pycache__/
 
 # Ignore database files (Optional: keep this if you WANT to push the DBs)
 *.db
+
+# Ignore the new virtual environment
+.myvenv/
+
+# Ignore the raw image dataset it is too large 
+
+ Data/
