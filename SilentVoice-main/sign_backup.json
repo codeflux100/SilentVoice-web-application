@@ -1,0 +1,140 @@
+[
+    {
+        "id": "A",
+        "name": "Approval",
+        "image_name": "Approval",
+        "description": "Shows agreement or positive affirmation."
+    },
+    {
+        "id": "B",
+        "name": "Benevolence",
+        "image_name": "Benevolence",
+        "description": "Indicates peace, goodwill, or victory."
+    },
+    {
+        "id": "C",
+        "name": "Call",
+        "image_name": "Call",
+        "description": "Mimics holding a phone, used to say \u201cCall me.\u201d"
+    },
+    {
+        "id": "D",
+        "name": "Delight",
+        "image_name": "Delight",
+        "description": "Expresses joy, appreciation, or congratulations."
+    },
+    {
+        "id": "E",
+        "name": "Enough",
+        "image_name": "Enough",
+        "description": "Sign to stop something or say \u201cthat\u2019s enough.\u201d"
+    },
+    {
+        "id": "F",
+        "name": "Friendship",
+        "image_name": "Friendship",
+        "description": "Symbol of camaraderie or unity."
+    },
+    {
+        "id": "G",
+        "name": "Greeting",
+        "image_name": "Greeting",
+        "description": "Used for meeting, agreement, or respect."
+    },
+    {
+        "id": "H",
+        "name": "Hello",
+        "image_name": "Hello",
+        "description": "Common gesture for greeting or acknowledging."
+    },
+    {
+        "id": "I",
+        "name": "Idea",
+        "image_name": "Idea",
+        "description": "Used when expressing an idea or point."
+    },
+    {
+        "id": "J",
+        "name": "Joy",
+        "image_name": "Joy",
+        "description": "Celebration, excitement, or happiness."
+    },
+    {
+        "id": "K",
+        "name": "Keep Strong",
+        "image_name": "keep_strong",
+        "description": "Symbol of strength and support."
+    },
+    {
+        "id": "L",
+        "name": "Look",
+        "image_name": "Look",
+        "description": "Directs attention to something."
+    },
+    {
+        "id": "M",
+        "name": "Mute",
+        "image_name": "Mute",
+        "description": "Represents silence or quietness."
+    },
+    {
+        "id": "N",
+        "name": "Nod",
+        "image_name": "Nod",
+        "description": "Gesture implying \u201cI know\u201d or secret understanding."
+    },
+    {
+        "id": "O",
+        "name": "Okay",
+        "image_name": "Okay",
+        "description": "Universally means approval or agreement."
+    },
+    {
+        "id": "P",
+        "name": "Pray",
+        "image_name": "Pray",
+        "description": "Represents prayer, gratitude, or humility."
+    },
+    {
+        "id": "Q",
+        "name": "Question",
+        "image_name": "Question",
+        "description": "Thinking or asking something."
+    },
+    {
+        "id": "R",
+        "name": "Respect",
+        "image_name": "Respect",
+        "description": "Gesture of salutation or acknowledgment."
+    },
+    {
+        "id": "S",
+        "name": "Stop",
+        "image_name": "Stop",
+        "description": "Command to halt or pause."
+    },
+    {
+        "id": "T",
+        "name": "Trust",
+        "image_name": "Trust",
+        "description": "Sign of hoping for good luck or honesty."
+    },
+    {
+        "id": "U",
+        "name": "Understanding",
+        "image_name": "Understanding",
+        "description": "Gesture of openness, acceptance, or receiving."
+    },
+    {
+        "id": "V",
+        "name": "Victory",
+        "image_name": "Victory",
+        "description": "Sign of success or peace."
+    },
+    {
+        "id": "W",
+        "name": "Welcome",
+        "image_name": "Welcome",
+        "description": "Used to greet or say hello."
+    }
+]

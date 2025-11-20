@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block body_class %}overflow-hidden-body{% endblock %}
+{% block other_css %}
+     <link rel="stylesheet" href="{{ url_for('static',filename='translate_page_style.css')}}">
+ 
+     <style>
+        .camera_image {
+             position: relative;
+             overflow: hidden;
+         }
+        .video_feed_stream {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             object-fit: cover; /* This ensures video fills the area */
+             z-index: 0;
+         }
+        .text_messages {
+             position: relative;
+             z-index: 1; /* Keeps text on top of the video */
+         }
+     </style>
+{% endblock %}
+
+{% block content %}
+     <div class="camera_image">
+         <img src="{{ url_for('video_feed') }}" class="video_feed_stream" alt="Live Translation">
+
+         <div class="text_messages">Text After translation</div>
+     </div>
+
+     <div class="control_panel">
+         <div class="camera control">
+             <img src="{{url_for('static',filename='images/camera.png')}}" class="cam image">
+         </div>
+         <div class="microphone control">
+             <img src="{{url_for('static',filename='images/microphone.png')}}" class="mic image">
+         </div>
+         <div class="text control">
+         <img src="{{url_for('static',filename='images/message.png')}}" class="txt image">
+         </div>
+                 <div class="close control" id="close-button">
+             <img src="{{url_for('static',filename='images/close.png')}}" class="cross image">
+         </div>
+     </div>
+
+    <script>
+        document.getElementById('close-button').addEventListener('click', function() {
+            // Stop the streaming image from loading
+            document.querySelector('.video_feed_stream').src = "";
+            
+            // Send request to the Flask server to release the camera hardware
+            fetch('{{ url_for("release_camera") }}', { method: 'GET' })
+                .then(response => {
+                    // Redirect to the homepage regardless of the server's response
+                    window.location.href = '{{ url_for("home_page") }}';
+                })
+                .catch(error => {
+                    console.error('Error releasing camera:', error);
+                    // Redirect even if fetch fails, to move the user off the page
+                    window.location.href = '{{ url_for("home_page") }}';
+                });
+        });
+    </script>
+{% endblock %}

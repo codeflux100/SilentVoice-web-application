@@ -1,0 +1,163 @@
+    body{
+        background-color: #FFA726;
+        overflow: hidden;
+    }
+    .button{
+        background-color: #1e1e1e;
+        color: #FAFAFA;
+        font-family:'Lucida Sans';
+        font-size: 1.6vw;
+        position: absolute;
+        border-radius: 20vw;
+    }
+    .learn.button{
+        height:3vw;
+        width:9.5vw;
+        left:3vw;
+        top:3vw;
+    }
+    .translate.button{
+        height:3vw;
+        width:10vw;
+        left:85vw;
+        top:3vw;
+    }
+    .learn_text{
+        position: absolute;
+        top:-1.15vw;
+        left:1.4vw;
+        font-family: monospace;
+    }
+    .translate_text{
+        position: absolute;
+        top:-1.15vw;
+        left:1.2vw;
+        font-family: monospace;
+    }
+    .heading{
+        position: absolute;
+        left:36.7vw;
+        top:-0.5vw;
+        font-size:5vw;
+        font-family:'Franklin Gothic Medium' ;
+    }
+    .main_tag{
+        font-family:'Lucida Grande';
+        position: absolute;
+        font-size: 2.5vw;
+    }
+    .main_tag.one{
+        left:36vw;
+        top:15vw;
+    }
+    .main_tag.two{
+        left:36.2vw;
+        top:17vw;
+    }
+    .main_tag.three{
+        left:41.5vw;
+        top:19vw;
+    }
+    .get_started_anchor{
+        text-decoration: none;
+        color: #FAFAFA;
+    }
+    .get_started_button{
+        height:4vw;
+        width:15vw;
+        background-color: #1e1e1e;
+        color: #FAFAFA;
+        font-family:'Lucida Sans';
+        font-size: 1.6vw;
+        position: absolute;
+        border-radius: 20vw;
+        left:41vw;
+        top:28vw;
+        display: flex;
+        z-index:5;
+    }
+    .get_started_image{
+        height:2vw;
+        width:2vw;
+        position: absolute;
+        left:11.5vw;
+        top:1vw;
+    }
+    .get_started_text{
+        position: absolute;
+        left:1.8vw;
+        top:-0.5vw;
+    }
+    .image{
+        position: absolute;
+        z-index:1;
+    }
+    .image.one{
+        left:-3vw;
+        top:13vw;
+        height: 20vw;
+        width: 30vw;
+    }
+    .image.two{
+        left:-4vw;
+        top:34vw;
+        height:15vw;
+        width:28vw;
+    }
+    .image.three{
+        left:8vw;
+        top:28vw;
+        height:20vw;
+        width:38vw;
+    }
+    .image.four{
+        left:25vw;
+        top:30vw;
+        height: 20vw;
+        width: 38vw;
+    }
+    .image.five{
+        left:52vw;
+        top:32vw;
+        height:10vw;
+        width:10vw;
+        transform: rotate(15deg);
+    }
+    .image.six{
+        left:57vw;
+        top:40vw;
+        height:10vw;
+        width:10vw;
+    }
+    .image.seven{
+        left:62vw;
+        top:25vw;
+        height: 30vw;
+        width:30vw;
+    }
+    .image.eight{
+        left:80vw;
+        top:30vw;
+        height:20vw;
+        width:30vw;
+    }
+    .image.nine{
+        left:75vw;
+        top:10vw;
+        height:20vw;
+        width:35vw;
+    }
+    .image.ten{
+        left:73vw;
+        top:10vw;
+        height: 5vw;
+        width:5vw;
+        transform: rotate(-18deg)
+    }
+    .image.eleven{
+        left:69vw;
+        top:9vw;
+        height: 2.5vw;
+        width:2.5vw;
+        transform: rotate(-16deg);
+    }

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block other_css %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='sign_word_style.css')}}">
+{% endblock %}
+
+{% block content%}
+<main class="container">
+    <a href="/home_page"><div class="close"><img src="{{url_for('static',filename='images/close_footer.png')}}" class="close_image"></div></a>
+    <div class="heading">
+        <h1 class="h1">{{ name }}</h1>
+    </div>
+    <div class="description_box">
+        <div class="description_text"><p class="txt">Description</p></div>
+        <div class="image_box"><img src="{{url_for('static',filename='images/' + name + '.png')}}" class="image"></div>
+    </div>
+</main>
+{% endblock %}
+
+{%block other_js %}
+        <script src="{{url_for('static',filename='js/sign_word_data_script.js')}}"></script>
+{% endblock %}

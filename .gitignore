@@ -1,0 +1,11 @@
+# Ignore the virtual environment folder
+.silentvoice/
+venv/
+env/
+
+# Ignore compiled python files
+__pycache__/
+*.pyc
+
+# Ignore database files (Optional: keep this if you WANT to push the DBs)
+*.db

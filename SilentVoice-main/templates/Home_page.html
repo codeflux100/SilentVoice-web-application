@@ -1,0 +1,70 @@
+    {% extends 'layout.html' %}
+
+    {% block body_class %}overflow-hidden-body{% endblock %}
+
+    {% block other_css %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='home_page_style.css')}}">
+    {% endblock %}
+
+    {% block content %}
+        <input class="input_bar" type="text" placeholder="search sign">
+        <button class="search_button"><img src="{{url_for('static',filename='images/search_logo.png')}}" class="search_logo"></button>
+
+        <a href="{{url_for('learn_page')}}"><button class="learn button">Practice Signs</button></a>
+        <a href="{{url_for('translate_page')}}"><button class="translate button">Translate Now</button></a>
+
+        <div class="footer">
+            <div class="two" id="two">
+                <img src="{{(url_for('static',filename='images/dictionary_img.png'))}}" class="text_two image">
+                <p class="text two">Dictionary</p>
+            </div>
+            <div class="three" id="three">
+                <img src="{{url_for('static',filename='images/contact_img.png')}}" class="text_three image">
+                <p class="text three">Contact</p>
+            </div>
+        </div>
+
+
+        <!-- Suggestions Button page content -->
+        <div class="blur_screen " id="blur_screen"></div>
+        <div class="footer_base" id="footer_base">
+            <img src="{{url_for('static',filename='images/close_footer.png')}}" class="close_logo" id="close_logo">
+            <div class="dictionary_box show" id="dictionary_box">
+                <img src="{{url_for('static',filename='images/dictionary_img.png')}}" class="footer_logo">
+                <p class="heading">Dictionary</p>
+                <div class="dictionary_navigation"></div>
+                <div class="signs"></div>
+            </div>
+            <div class="contact_box show" id="contact_box">
+                <img src="{{url_for('static',filename='images/contact_img.png')}}" class="footer_logo">
+                <p class="heading">CONTACT US</p>
+                <p class="content">Any questions or remarks? Just write us a message</p>
+                <form action="/submit_contact" method="POST">
+                    <div class="email_input">
+                        <p class="mail tag">Email</p>
+                        <input type="email" name="email" class="user email" required placeholder="Enter a Valid email">
+                    </div>
+                    <div class="name_input">
+                        <p class="info tag">Name</p>
+                        <input type="text" name="name" class="user name" required placeholder="Enter Name">
+                    </div>
+                    <input type="submit" class="submit_button" value="submit">
+                </form>
+                <div class="contact_information">
+                    <div class="phone circle"><img src="{{url_for('static',filename='images/phone_logo.png')}}" class="imgo"></div>
+                    <p class="phone title">Phone(LANDLINE)</p>
+                    <p class="phone subtitle">+912 2345 879</p>
+                    <div class="location circle"><img src="{{url_for('static',filename='images/location.png')}}" class="imgo"></div>
+                    <div class="location title">LOCATION</div>
+                    <div class="location subtitle">ABC Building 3<sup>rd</sup> Floor</div>
+                </div>
+                <div class="footer_bar"></div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {%block other_js %}
+        <script src="{{url_for('static',filename='js/home_footer_content_script.js')}}"></script>
+        <script src="{{url_for('static',filename='js/home_dictionary_data_script.js')}}"></script>
+        <script src="{{url_for('static',filename='js/home_search_bar_script.js')}}"></script>
+    {% endblock %}

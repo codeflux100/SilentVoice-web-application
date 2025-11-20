@@ -1,0 +1,362 @@
+.input_bar{
+    position: absolute;
+    left:24vw;
+    top:18vw;
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255,255,255,0.3);
+    height: 3.5vw;
+    width: 44vw;
+    border-radius: 20vw;
+    padding-left: 3vw;
+    color: white;
+    font-size:2vw;
+
+}
+.search_button{
+    height:3.5vw;
+    width:3.5vw;
+    position: absolute;
+    left:74vw;
+    top:18vw;
+    background-color: #1e1e1e;
+    border-radius: 20vw;
+    border: 1px solid #FFA726;
+}
+.search_logo{
+    height:3vw;
+    width:3vw;
+    position: absolute;
+    left:0.25vw;
+    top:0.25vw;
+}
+.search_button:hover{
+    transform: scale(1.12);
+}
+.button{
+    height:4vw;
+    width:15vw;
+    background-color: #1e1e1e;
+    border-radius: 20vw;
+    border: 1px solid #FFA726;
+    position: absolute;
+    color: #FAFAFA;
+    font-size:1.5vw;
+}
+.learn{
+    left:30vw;
+    top:27vw;
+}
+.translate{
+    left:50vw;
+    top:27vw;
+}
+.button:hover{
+    border:1px solid #FAFAFA;
+    color: #FFA726;
+}
+.footer{
+    height:6vw;
+    width:100%;
+    background-color:#FFA726;
+    position: absolute;
+    top:41.4vw;
+    border-radius: 2vw 2vw 0vw 0vw;
+}
+.text{
+    color: #121212;
+    font-size: 1.5vw;
+    position: absolute;
+    font-family: 'Lucida Sans';
+    top:3.3vw;
+    font-weight: bold;
+}
+.text.two{
+    left: 10vw;
+}
+.text.three{
+    left:78.6vw;
+}
+.image{
+    height: 2.5vw;
+    width: 2.5vw;
+    position: absolute;
+    top:1vw;
+}
+.text_two{
+    left:12.5vw;
+}
+.text_three{
+    left:80vw;
+}
+
+/* CSS Styling for Suggestions page opened when the rate button is clicked */
+
+.blur_screen{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    left:0;
+    top:0;
+    backdrop-filter: blur(1vw);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+}
+.footer_base{
+    z-index: 7;
+    background-color: #FFA726;
+    height:calc(100% - 4.34vw); 
+    width:99.9%;
+    position: fixed;
+    left:0vw;
+    bottom:-100%;
+    transition: bottom 0.6s ease-in-out;
+    border-radius: 4vw 4vw 0vw 0vw;
+}
+.footer_base.active{
+    bottom:0;
+}
+.blur_screen.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.contact_box.show{
+    display:none;
+}
+.dictionary_box.show{
+    display: none;
+}
+.suggestion_box.show{
+    display:none;
+}
+.footer_logo{
+    height: 5vw;
+    width: 5vw;
+    position: absolute;
+    left:3vw;
+    top:3vw;
+}
+.close_logo{
+    height: 3.5vw;
+    width: 3.5vw;
+    position: absolute;
+    right:3vw;
+    top:3vw;
+}
+.heading{
+    position: absolute;
+    left:35vw;
+    top:3vw;
+    font-size:4vw;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+.content{
+    font-size:2vw;
+    font-family:serif;
+    font-weight: bolder;
+    position: absolute;
+    left:26.7vw;
+    top:10vw;
+}
+.tag{
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    position: absolute;
+}
+.mail.tag{
+    left:27vw;
+    top:16vw;
+}
+.info.tag{
+    left: 53vw;
+    top:16vw;
+}
+.user{
+    background-color: rgba(207,230,236,0.82);
+    border: 1px solid black;
+    border-radius: 20vw;
+    height:2.5vw;
+    width:15vw;
+    padding-left:1vw;
+    position: absolute;
+}
+.email.user{
+    left:26vw;
+    top:20vw;
+}
+.name.user{
+    left:52vw;
+    top:20vw;
+}
+.submit_button{
+    height: 2.7vw;
+    width:13vw;
+    border-radius: 20vw;
+    background-color: #121212;
+    color: white;
+    position: absolute;
+    left:40vw;
+    top:26vw;
+    font-size: 1.3vw;
+}
+.contact_information{
+    height: 8vw;
+    width: 80vw;
+    position: absolute;
+    background-color: #0B4144;
+    top:34vw;
+    left:9vw;
+    z-index: 5;
+    border-radius: 2vw;
+}
+.footer_bar{
+    background-color: #121212;
+    position: absolute;
+    height: 4vw;
+    width: 100%;
+    top: 39.3vw;
+    left:0.05vw;
+    z-index:3;
+}
+.circle{
+    height: 4vw;
+    width: 4vw;
+    background-color: #C07911;
+    border-radius: 4vw;
+    position: absolute;
+    padding:0.5vw;
+}
+.phone.circle{
+    top:-1.5vw;
+    left:10vw;
+}
+.location.circle{
+    top:-1.5vw;
+    left:60vw;
+}
+.imgo{
+    height:3vw;
+    width: 3vw;
+}
+.title{
+    color: white;
+    font-size:1.5vw;
+    font-weight: bold;
+    font-family: Georgia;
+    position: absolute;
+}
+.subtitle{
+    color: white;
+    font-size:1vw;
+    font-family: sans-serif;
+    position: absolute;
+}
+.phone.title{
+    left:4vw;
+    top:3vw;
+}
+.phone.subtitle{
+    left:4vw;
+    top:5vw
+}
+.location.title{
+    left:58vw;
+    top:3vw;
+}
+.location.subtitle{
+    left:58vw;
+    top:5vw;
+}
+.exp{
+    height:5vw;
+    width: 5vw;
+    border-radius: 12vw;
+    background-color: red;
+    z-index:9;
+    position: absolute;
+    top:30vw
+}
+
+/* Dictionary Styling */
+
+.dictionary_box{
+    position: absolute;
+    top: 1vw;
+    left: 3vw;
+    width: 90vw;
+    height: calc(100% - 5vw);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2vw;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    z-index: 9;
+}
+.dictionary_navigation{
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    position: relative;
+    top:14vw;
+    left:2.5vw;
+
+}
+.search{
+    height: 4vw;
+    width: 4vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top:1vw;
+    font-size: 2vw;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.search:hover{
+    transform: scale(0.7);
+}
+.abcd{
+    height:10vw;
+    width: 3vw;
+    background-color: red;
+    position: absolute;
+    top:30vw;
+    left:3vw;
+}
+.signs{
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+    position: absolute;
+    top:30vw;
+    left:5vw;
+}
+.sign_starting{
+    font-size: 2vw;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.sign_word{
+    font-size: 1.5vw;
+    height:2vw;
+    width:10vw;
+    border-bottom: 1px solid #121212;
+    border-top: 1px solid #121212;
+    position: relative;
+    left:1vw;
+    top:3vw;
+    z-index:4;
+    cursor: pointer;
+    text-align: center;
+}
+.sign_word:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.word_link{
+    text-decoration: none;
+    color: black;
+}

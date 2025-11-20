@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html, body {
+    height: 100%;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+body{
+    background-color: #121212;
+}
+.logo{
+    height:7vw;
+    width:7vw;
+    position: absolute;
+    left:1vw;
+    top:0.7vw;
+}
+.branding{
+    color: #fafafa;
+    font-family:'Lucida Sans';
+    position: absolute;
+    left:7vw;
+    top:2.6vw;
+    font-size:1.6vw;
+}
+.navigation_bar{
+    height:5vw;
+    width:45vw;
+    position: absolute;
+    left:25vw;
+    top:-0.01vw;
+    background-color: #1e1e1e;
+    border-radius: 0vw 0vw 2vw 2vw;
+    display: flex;
+    gap: 7vw;
+    justify-content: center;
+    align-items: center;
+}
+.imgg{
+    height: 2.5vw;
+    width: 2.5vw;
+}
+.imgg:hover{
+    transform: scale(1.15);
+}
+/*
+.main_page_logo{
+    left:6.25vw;
+    top: 1.3vw;
+}
+.home_page_logo{
+    left:13.25vw;
+    top:1.3vw;
+}
+.learn_page_logo{
+    left:20.25vw;
+    top:1.3vw;
+}
+.translate_page_logo{
+    left:27.25vw;
+    top:1.3vw;
+}
+.sun_logo{
+    left:34.25vw;
+    top:1.3vw;
+}*/
+.profile{
+    height: 3vw;
+    width: 3vw;
+    border-radius: 10vw;
+    background-color: #1e1e1e;
+    position: absolute;
+    left:87vw;
+    top:2.2vw;
+    border:1px solid #FFA726;
+}
+.profile_pic{
+    height:2.5vw;
+    width:2.5vw;
+    position: absolute;
+    left:0.2vw;
+    top:0.2vw;
+}
+.profile:hover{
+    transform: scale(1.15);
+}
+.profile_dropdown{
+    height:20vw;
+    width:10vw;
+    background-color: #1e1e1e;
+    position: absolute;
+    left:84vw;
+    top:2vw;
+    color: #fafafa;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    border-radius: 2vw;
+}
+.name{
+    position: absolute;
+    left:1.5vw;
+}
+.picture{
+    height:2vw;
+    width:2vw;
+    position: absolute;
+    left:6.7vw;
+    top:0.7vw;
+}
+.dropdown{
+    height:3.5vw;
+    width:100%;
+    border-bottom: 1px solid rgba(255,167,38,0.6);
+    border-radius: 2vw 2vw 0vw 0vw;
+}
+.dropdown:hover{
+    background-color: rgba(255,167,38,0.3);
+    border-bottom: 1px solid #121212;
+}
+

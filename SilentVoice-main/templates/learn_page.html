@@ -1,0 +1,29 @@
+{% extends 'layout.html'%}
+
+{% block other_css %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='learn_page_style.css')}}">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="score"><p class="correct_score">0</p><p class="score_divider">/</p><p class="total_score">5</p></div>
+        <div class="question_bar">
+            <p class="question">This Sign is for :- </p>
+            <img src="{{url_for('static',filename='images/call.png')}}" class="question_image">
+        </div>
+        <div class="answer_option">
+            <div class="option one">A <p class="txt_one text"></p></div>
+            <div class="option two">B <p class="txt_two text"></p></div>
+            <div class="option three">C <p class="txt_three text"></p></div>
+            <div class="option four">D <p class="txt_four text"></p></div>
+        </div>
+        <div class="navigation">
+            <div class="previous">PREVIOUS</div>
+            <div class="next">NEXT</div>
+        </div>
+    </main>
+{% endblock %}
+
+{%block other_js %}
+    <script src="{{url_for('static',filename='js/learn_page_script.js')}}"></script>
+{% endblock %}

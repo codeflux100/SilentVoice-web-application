@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href= "{{url_for('static',filename='layout_page_style.css')}}">
+        <title>Silent Voice</title>
+        {% block other_css %}{% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}">
+        <header>
+            <div class="site_logo"><img src="{{url_for('static',filename='images/SilentVoiceLogo.png')}}"class="logo"><p class="branding">Silent Voice</p></div>
+            <nav class="navigation_bar">
+                <div class="main_page">
+                    <a href="{{url_for('main_page')}}" ><img src="{{url_for('static',filename='images/main_page_logo.png')}}" class="main_page_logo imgg"></a>
+                </div>
+                <div class="home_page">
+                    <a href="{{url_for('home_page')}}"><img src="{{url_for('static',filename='images/home_page_logo.png')}}" class="home_page_logo imgg"></a>
+                </div>
+                <div class="learn_page">
+                    <a href="{{url_for('learn_page')}}"><img src="{{url_for('static',filename='images/learn_page_logo.png')}}" class="learn_page_logo imgg"></a>
+                </div>
+                <div class="translate_page">
+                    <a href="{{url_for('translate_page')}}"><img src="{{url_for('static',filename='images/translate_page_logo.png')}}" class="translate_page_logo imgg"></a>
+                </div>
+            </nav>
+            <div class="profile">
+                <img src="{{url_for('static',filename='images/profile_logo.png')}}" class="profile_pic">
+            </div>
+            <!--
+            <div class="profile_dropdown">
+                <div class="profile_heading"><p class="name">lakshay</p> <img src="{{url_for('static',filename='images/profile_logo.png')}}" class="picture"></div>
+            </div>
+            <div class=""></div> -->
+        </header>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        {% block other_js %}{% endblock %}
+    </body>
+</html>
