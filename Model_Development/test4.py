@@ -10,8 +10,8 @@ from ibm_watson import TextToSpeechV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 # IBM Watson setup
-api_key = 'nJmgJFVpWEKxdb8KJaW0AxrdFRmHLpRLL2IzX1SPY9oR'
-url = 'https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/c709be35-e718-4cc8-8d64-0650b9a6c34e'
+api_key = os.getenv("API_KEY")
+url = os.getenv("API_URL")
 
 authenticator = IAMAuthenticator(api_key)
 tts = TextToSpeechV1(authenticator=authenticator)

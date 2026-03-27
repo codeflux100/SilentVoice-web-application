@@ -16,3 +16,6 @@ __pycache__/
 # Ignore the raw image dataset it is too large 
 
  Data/
+
+ # ignore the credentials
+ .env
