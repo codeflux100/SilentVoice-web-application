@@ -1,22 +1,55 @@
 {% extends 'layout.html' %}
 
 {% block other_css %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='sign_word_style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign_word_style.css') }}">
 {% endblock %}
 
-{% block content%}
-<main class="container">
-    <a href="/home_page"><div class="close"><img src="{{url_for('static',filename='images/close_footer.png')}}" class="close_image"></div></a>
-    <div class="heading">
-        <h1 class="h1">{{ name }}</h1>
+{% block content %}
+<div class="sign-detail-wrapper">
+    <div class="sign-modal-card">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <div class="title-group">
+                <span class="sign-badge">ISL DICTIONARY</span>
+                <h1 class="h1">{{ name }}</h1>
+            </div>
+            
+            <a href="{{ url_for('home_page') }}" class="close-btn-link" title="Close">
+                <div class="close">
+                    <img src="{{ url_for('static', filename='images/close_footer.png') }}" class="close_image" alt="Close">
+                </div>
+            </a>
+        </div>
+
+        <!-- Modal Body (2-Column Centered Grid) -->
+        <div class="modal-body-grid">
+            <!-- Left: Description Box -->
+            <div class="description_text">
+                <span class="desc-label">Gesture Description</span>
+                <p class="txt">Loading description...</p>
+            </div>
+
+            <!-- Right: Gesture Image Box -->
+            <div class="image_box">
+                <img src="{{ url_for('static', filename='images/' + name + '.png') }}" class="image" alt="{{ name }} gesture">
+            </div>
+        </div>
+
+        <!-- Modal Footer Actions -->
+        <div class="modal-footer-actions">
+            <a href="{{ url_for('home_page') }}" class="btn-cream">
+                <span>← Back to Dictionary</span>
+            </a>
+            <a href="{{ url_for('translate_page') }}" class="btn-coral">
+                <span>Practice with Camera →</span>
+            </a>
+        </div>
+
     </div>
-    <div class="description_box">
-        <div class="description_text"><p class="txt">Description</p></div>
-        <div class="image_box"><img src="{{url_for('static',filename='images/' + name + '.png')}}" class="image"></div>
-    </div>
-</main>
+</div>
 {% endblock %}
 
-{%block other_js %}
-        <script src="{{url_for('static',filename='js/sign_word_data_script.js')}}"></script>
+{% block other_js %}
+    <script src="{{ url_for('static', filename='js/sign_word_data_script.js') }}"></script>
 {% endblock %}

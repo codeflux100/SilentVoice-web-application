@@ -1,29 +1,78 @@
-{% extends 'layout.html'%}
+{% extends 'layout.html' %}
 
 {% block other_css %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='learn_page_style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='learn_page_style.css') }}">
 {% endblock %}
 
 {% block content %}
-    <main>
-        <div class="score"><p class="correct_score">0</p><p class="score_divider">/</p><p class="total_score">5</p></div>
+<div class="quiz-detail-wrapper">
+    <div class="quiz-modal-card">
+        
+        <!-- Quiz Header & Score Badge -->
+        <div class="quiz-header">
+            <div class="quiz-title-group">
+                <span class="quiz-badge">PRACTICE MODULE · ISL</span>
+                <h1 class="quiz-heading">Practice Signs Quiz</h1>
+                <p class="quiz-subheading">Test your recognition of Indian Sign Language gestures.</p>
+            </div>
+            
+            <div class="score">
+                <span class="score-icon">🏆</span>
+                <span class="correct_score">0</span>
+                <span class="score_divider">/</span>
+                <span class="total_score">5</span>
+            </div>
+        </div>
+
+        <!-- Question Stage (Sign Gesture Display) -->
         <div class="question_bar">
-            <p class="question">This Sign is for :- </p>
-            <img src="{{url_for('static',filename='images/call.png')}}" class="question_image">
+            <div class="question-text-box">
+                <span class="question-label">QUESTION</span>
+                <p class="question">What sign is shown below?</p>
+            </div>
+
+            <div class="question-image-frame">
+                <img src="{{ url_for('static', filename='images/call.png') }}" class="question_image" alt="Sign Question">
+            </div>
         </div>
+
+        <!-- 4 Multiple Choice Answer Options (2x2 Grid) -->
         <div class="answer_option">
-            <div class="option one">A <p class="txt_one text"></p></div>
-            <div class="option two">B <p class="txt_two text"></p></div>
-            <div class="option three">C <p class="txt_three text"></p></div>
-            <div class="option four">D <p class="txt_four text"></p></div>
+            <div class="option one">
+                <span class="option-prefix">A</span>
+                <p class="txt_one text"></p>
+            </div>
+
+            <div class="option two">
+                <span class="option-prefix">B</span>
+                <p class="txt_two text"></p>
+            </div>
+
+            <div class="option three">
+                <span class="option-prefix">C</span>
+                <p class="txt_three text"></p>
+            </div>
+
+            <div class="option four">
+                <span class="option-prefix">D</span>
+                <p class="txt_four text"></p>
+            </div>
         </div>
+
+        <!-- Navigation Buttons -->
         <div class="navigation">
-            <div class="previous">PREVIOUS</div>
-            <div class="next">NEXT</div>
+            <div class="previous">
+                <span>← Previous</span>
+            </div>
+            <div class="next">
+                <span>Next →</span>
+            </div>
         </div>
-    </main>
+
+    </div>
+</div>
 {% endblock %}
 
-{%block other_js %}
-    <script src="{{url_for('static',filename='js/learn_page_script.js')}}"></script>
+{% block other_js %}
+    <script src="{{ url_for('static', filename='js/learn_page_script.js') }}"></script>
 {% endblock %}
