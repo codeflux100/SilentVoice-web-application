@@ -163,13 +163,13 @@ def submit_contact():
     return redirect('/home_page')
 
 @app.route('/')
-@app.route('/home_page')
-def home_page():
-    return render_template('Home_page.html')
-
 @app.route('/main_page')
 def main_page():
     return render_template('Main_page.html')
+
+@app.route('/home_page')
+def home_page():
+    return render_template('Home_page.html')
 
 @app.route('/learn_page')
 def learn_page():

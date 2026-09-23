@@ -1,34 +1,337 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SilentVoice</title>
-        <link rel="icon" href="{{url_for('static',filename='images/SilentVoiceLogo.png')}}" type="image/png" sizes="64x64">
-        <link rel="stylesheet" href="{{ url_for('static',filename='main_page_style.css') }}">
-    </head>
-    <body>
-        <header>
-            <a href="{{url_for('learn_page')}}"><div class="learn button"><p class="learn_text">Practice</p></div></a>
-            <h1 class="heading">Silent Voice</h1>
-            <a href="{{url_for('translate_page')}}"><div class="translate button"><p class="translate_text">translate</p></div></a>
-        </header>
-        <main>
-            <h1 class="main_tag one">Your Hands. Their Voice.</h1>
-            <h1 class="main_tag two">Seamless Sign Language</h1>
-            <h1 class="main_tag three">Translation.</h1>
-            <a href="{{url_for('home_page')}}" class="get_started_anchor"><div class="get_started_button"><p class="get_started_text">Get Started</p><img src="../static/images/right_arrow.png" class="get_started_image"></a></div>
-            <img src="../static/images/image_one.png" class="image one">
-            <img src="../static/images/image_two.png" class="image two">
-            <img src="../static/images/image_three.png" class="image three">
-            <img src="../static/images/image_four.png" class="image four">
-            <img src="../static/images/image_five.png" class="image five">
-            <img src="../static/images/image_six.png" class="image six">
-            <img src="../static/images/image_eight.png" class="image seven">
-            <img src="../static/images/image_nine.png" class="image eight">
-            <img src="../static/images/image_ten.png" class="image nine">
-            <img src="../static/images/image_eleven.png" class="image ten">
-            <img src="../static/images/image_eleven.png" class="image eleven">
-        </main>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Voice | Learn to Speak with Your Hands</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/SilentVoiceLogo.png') }}" type="image/png" sizes="64x64">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page_style.css') }}">
+</head>
+<body class="quiet-place-theme">
+
+    <!-- Ambient Background Elements -->
+    <div class="ambient-bg">
+        <div class="cloud cloud-1">☁️</div>
+        <div class="cloud cloud-2">☁️</div>
+        <div class="cloud cloud-3">☁️</div>
+    </div>
+
+    <!-- 1. NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home_page') }}" class="logo-brand">
+                <img src="{{ url_for('static', filename='images/SilentVoiceLogo.png') }}" alt="Silent Voice Logo" class="logo-img">
+                <span class="logo-text">Silent Voice</span>
+                <span class="logo-hand-icon">🖐️</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="{{ url_for('home_page') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('learn_page') }}" class="nav-link">Learn</a>
+                <a href="{{ url_for('translate_page') }}" class="nav-link">Practice</a>
+                <a href="{{ url_for('home_page') }}" class="nav-link">About</a>
+            </nav>
+
+            <a href="{{ url_for('learn_page') }}" class="btn btn-coral nav-cta">
+                <span>Start Learning</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-tag">
+                    <span class="badge-icon">✨</span>
+                    <span>Indian Sign Language (ISL) Platform</span>
+                </div>
+                <h1 class="hero-title">
+                    Learn to Speak <br>
+                    <span class="highlight-text">with Your Hands.</span>
+                </h1>
+                <p class="hero-description">
+                    Learn, practice, and understand Indian Sign Language (ISL) through interactive lessons designed to make communication more accessible for everyone.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="{{ url_for('learn_page') }}" class="btn btn-coral btn-lg">
+                        <span>Start Learning</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="{{ url_for('home_page') }}" class="btn btn-cream btn-lg">
+                        <span>Explore Lessons</span>
+                    </a>
+                </div>
+
+                <!-- Floating Sign Vocabulary Chips -->
+                <div class="vocab-chips">
+                    <span class="chip chip-active" data-sign="HELLO">🖐️ HELLO (ISL)</span>
+                    <span class="chip" data-sign="I LOVE YOU">🤟 I LOVE YOU (ISL)</span>
+                    <span class="chip" data-sign="THANK YOU">🙏 THANK YOU (ISL)</span>
+                    <span class="chip" data-sign="PLEASE">🤝 PLEASE (ISL)</span>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Camera AI Visual -->
+            <div class="hero-visual">
+                <div class="camera-mockup-card">
+                    <div class="camera-header">
+                        <div class="cam-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="cam-title">LIVE VISION CAMERA</span>
+                        <span class="cam-status">REC ●</span>
+                    </div>
+
+                    <div class="camera-viewfinder">
+                        <img src="{{ url_for('static', filename='images/hero_camera_gesture.png') }}" alt="AI Sign Language Detection" class="cam-feed-img">
+
+                        <div class="ai-detection-overlay">
+                            <div class="bounding-box">
+                                <span class="box-label">Hand Detected (99.4%)</span>
+                            </div>
+                            <div class="detected-badge">
+                                <span class="check-mark">✓</span>
+                                <span id="detected-text">HELLO (ISL)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cam-footer">
+                        <div class="detection-info">
+                            <span class="info-dot"></span>
+                            <span>Computer Vision Active</span>
+                        </div>
+                        <a href="{{ url_for('translate_page') }}" class="cam-btn">Try Live Camera →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FEATURE SECTION -->
+    <section class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Core Features</span>
+                <h2 class="section-title">Everything You Need to Start Signing.</h2>
+                <p class="section-desc">Designed to be intuitive, visual, and enjoyable for learners of all levels.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Learn -->
+                <div class="feature-card">
+                    <div class="card-icon-wrapper mint">
+                        <span class="card-emoji">✋📖</span>
+                    </div>
+                    <h3 class="card-title">Interactive Lessons</h3>
+                    <p class="card-desc">
+                        Learn authentic Indian Sign Language (ISL) through clear visual demonstrations, categorized lessons, and progressive difficulty levels.
+                    </p>
+                    <a href="{{ url_for('learn_page') }}" class="card-link">Explore Lessons →</a>
+                </div>
+
+                <!-- Feature 2: Practice -->
+                <div class="feature-card">
+                    <div class="card-icon-wrapper coral">
+                        <span class="card-emoji">🖐️📷</span>
+                    </div>
+                    <h3 class="card-title">Practice With Your Camera</h3>
+                    <p class="card-desc">
+                        Practice gestures and improve your signing in real-time through interactive camera-based AI feedback.
+                    </p>
+                    <a href="{{ url_for('translate_page') }}" class="card-link">Start Practice →</a>
+                </div>
+
+                <!-- Feature 3: Track -->
+                <div class="feature-card">
+                    <div class="card-icon-wrapper blue">
+                        <span class="card-emoji">📈✋</span>
+                    </div>
+                    <h3 class="card-title">Track Your Progress</h3>
+                    <p class="card-desc">
+                        Monitor lessons completed, ISL signs learned, practice streaks, and your overall learning milestones.
+                    </p>
+                    <a href="{{ url_for('home_page') }}" class="card-link">View Dashboard →</a>
+                </div>
+
+                <!-- Feature 4: Explore -->
+                <div class="feature-card">
+                    <div class="card-icon-wrapper lavender">
+                        <span class="card-emoji">🤲💬</span>
+                    </div>
+                    <h3 class="card-title">Build Your Vocabulary</h3>
+                    <p class="card-desc">
+                        Discover everyday Indian sign gestures and gradually build a practical, high-frequency ISL vocabulary.
+                    </p>
+                    <a href="{{ url_for('home_page') }}" class="card-link">Search Dictionary →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INTERACTIVE LEARNING SHOWCASE -->
+    <section class="showcase-section">
+        <div class="section-container">
+            <div class="showcase-card">
+                <div class="showcase-left">
+                    <div class="showcase-badge">INTERACTIVE MODULE · ISL</div>
+                    <h2 class="showcase-title">Learn a Sign</h2>
+                    
+                    <div class="sign-meta">
+                        <span class="sign-name-active" id="showcase-sign-name">Hello</span>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+
+                    <p class="sign-description" id="showcase-sign-desc">
+                        In Indian Sign Language (ISL), raise your open hand beside your head, palm facing forward, and wave gently to greet someone warmly.
+                    </p>
+
+                    <div class="showcase-controls">
+                        <button class="control-btn" id="btn-prev-sign">← Previous</button>
+                        <button class="control-btn" id="btn-next-sign">Next Sign →</button>
+                    </div>
+
+                    <a href="{{ url_for('translate_page') }}" class="btn btn-coral btn-lg showcase-cta">
+                        <span>Practice This Sign</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="showcase-right">
+                    <div class="showcase-preview-box" id="showcase-preview-box">
+                        <div class="isl-character-wrapper" id="isl-character-wrapper">
+                            <img src="{{ url_for('static', filename='images/isl_hello_character.png') }}" alt="ISL Hello Gesture Character" class="isl-character-img" id="isl-character-img">
+                        </div>
+                        <div class="gesture-label-tag" id="showcase-tag">ISL Gesture: HELLO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HOW IT WORKS SECTION -->
+    <section class="how-it-works-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Simple 3-Step Journey</span>
+                <h2 class="section-title">How Silent Voice Works</h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3 class="step-title">Choose a Lesson</h3>
+                    <p class="step-desc">Select an ISL topic or vocabulary category that fits your learning goals.</p>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3 class="step-title">Learn the Sign</h3>
+                    <p class="step-desc">Watch authentic ISL visual demonstrations and hand movement breakdowns.</p>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3 class="step-title">Practice & Improve</h3>
+                    <p class="step-desc">Use your camera for real-time ISL feedback and track your progress daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ACCESSIBILITY / MISSION SECTION -->
+    <section class="mission-section">
+        <div class="section-container">
+            <div class="mission-card">
+                <div class="mission-text">
+                    <span class="section-subtitle">Our Purpose</span>
+                    <h2 class="mission-title">Communication Has No Limits.</h2>
+                    <p class="mission-desc">
+                        Silent Voice is built to make Indian Sign Language (ISL) learning approachable, visual, and accessible — helping more people communicate beyond spoken words.
+                    </p>
+                    <div class="mission-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">ISL Signs Indexed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Real-Time</span>
+                            <span class="stat-label">AI Camera Feedback</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Accessible & Free</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-visual">
+                    <div class="mission-illustration-card">
+                        <img src="{{ url_for('static', filename='images/image_two.png') }}" alt="Communication" class="mission-img">
+                        <div class="mission-badge">ISL Inclusive Learning 🤟</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FINAL CTA SECTION -->
+    <section class="cta-bottom-section">
+        <div class="section-container">
+            <div class="final-cta-card">
+                <div class="cta-bg-hands">🖐️ 🤟 ✌️ 🤝</div>
+                <h2 class="cta-heading">Ready to Start Signing?</h2>
+                <p class="cta-subheading">
+                    Learn your first ISL signs today and take the first step toward more inclusive communication.
+                </p>
+                <a href="{{ url_for('learn_page') }}" class="btn btn-coral btn-xl">
+                    <span>Start Learning Now</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/SilentVoiceLogo.png') }}" alt="Logo" class="footer-logo-img">
+                    <span class="footer-title">Silent Voice</span>
+                </div>
+                <p class="footer-tagline">Learn. Practice. Communicate.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="{{ url_for('home_page') }}" class="footer-link">Home</a>
+                <a href="{{ url_for('learn_page') }}" class="footer-link">Learn</a>
+                <a href="{{ url_for('translate_page') }}" class="footer-link">Practice</a>
+                <a href="{{ url_for('home_page') }}" class="footer-link">About</a>
+                <a href="{{ url_for('home_page') }}" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+
+            <div class="footer-copy">
+                &copy; 2026 Silent Voice. Built for accessible human communication in Indian Sign Language (ISL).
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS -->
+    <script src="{{ url_for('static', filename='js/main_page_script.js') }}"></script>
+</body>
 </html>
